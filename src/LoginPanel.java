@@ -180,13 +180,13 @@ public class LoginPanel extends JPanel {
 	
 	class CreateNewAccountListener implements ActionListener {
 		LoginPanel pane;
-		crosswordGUI parent;
+		CrosswordGUI parent;
 		public CreateNewAccountListener( LoginPanel pane ) {
 			this.pane = pane;
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			parent = ((crosswordGUI) pane.getParent());
+			parent = ((CrosswordGUI) pane.getParent());
 			parent.createNewAccount = new CreateNewAccount();
 			parent.createNewAccount.init();
 			parent.createNewAccount.setVisible(true);
@@ -199,13 +199,13 @@ public class LoginPanel extends JPanel {
 	
 	class LoginListener implements ActionListener {
 		LoginPanel pane;
-		crosswordGUI parent;
+		CrosswordGUI parent;
 		public LoginListener( LoginPanel pane ) {
 			this.pane = pane;
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			parent = ((crosswordGUI) pane.getParent());
+			parent = ((CrosswordGUI) pane.getParent());
 			parent.choosePuzzles = new ChoosePuzzlePane();
 			try {
 				String pass = passToString(password1.getPassword());
@@ -287,14 +287,14 @@ public class LoginPanel extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			//firstScreen for back button
-			((crosswordGUI) pane.getParent()).hideLoginPanel();
-			((crosswordGUI) pane.getParent()).welcomePane.setVisible(true);
+			((CrosswordGUI) pane.getParent()).hideLoginPanel();
+			((CrosswordGUI) pane.getParent()).welcomePane.setVisible(true);
 		}
 		
 	}
 	
 	public Player findPlayer(JTextField usernameField, JPasswordField passwordField) throws PasswordException {
-		Database db = ((crosswordGUI) this.getParent()).database;
+		Database db = ((CrosswordGUI) this.getParent()).database;
 		for( Player existingPlayer : db.getPlayerData() ) {
 			if( existingPlayer.getUserName().equals(usernameField.getText()) ) {
 				String pass = "";

@@ -126,8 +126,6 @@ public class Parser {
 			out.setCompleted();
 		}
 		
-		
-		
 		//set score
 		out.setScore(Integer.parseInt(gameInfo[4]));
 		try {

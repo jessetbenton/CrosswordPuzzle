@@ -259,9 +259,9 @@ public class ChoosePuzzlePane extends JPanel {
 					game.init( player1.getSavedGame(puzzleNumber) );
 				}
 
-				((crosswordGUI) pane.getParent()).hidePuzzleChooser();
-				((crosswordGUI) pane.getParent()).puzzle = game;
-				((crosswordGUI) pane.getParent()).add(game);
+				((CrosswordGUI) pane.getParent()).hidePuzzleChooser();
+				((CrosswordGUI) pane.getParent()).puzzle = game;
+				((CrosswordGUI) pane.getParent()).add(game);
 			}
 			else {
 				errorPlayMessage.setVisible(true);
@@ -446,7 +446,7 @@ public class ChoosePuzzlePane extends JPanel {
 	
 	
 	public void game_Global_Tab() {
-		GlobalHighScores highScores = ((crosswordGUI)this.getParent()).database.getGlobalHighScores();
+		GlobalHighScores highScores = ((CrosswordGUI)this.getParent()).database.getGlobalHighScores();
 		ScoreStructure[] topScores = highScores.getTopScores();
 		
 		String out[] = new String[topScores.length]; 

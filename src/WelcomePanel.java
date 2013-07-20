@@ -60,7 +60,7 @@ public class WelcomePanel extends JPanel{
 		}
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			crosswordGUI parent = ((crosswordGUI) pane.getParent()); 
+			CrosswordGUI parent = ((CrosswordGUI) pane.getParent()); 
 
 			//single player game
 
@@ -80,7 +80,7 @@ public class WelcomePanel extends JPanel{
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			crosswordGUI parent = ((crosswordGUI) pane.getParent()); 
+			CrosswordGUI parent = ((CrosswordGUI) pane.getParent()); 
 			parent.hideWelcomePanel();
 			parent.loginPanel = new LoginPanel();
 			parent.loginPanel.init(false);

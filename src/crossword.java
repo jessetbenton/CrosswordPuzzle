@@ -1,9 +1,6 @@
 import javax.swing.JFrame;
 
-
-
-
-public class crossword {
+public class Crossword {
 
 	static JFrame frame;
 	/**
@@ -14,15 +11,10 @@ public class crossword {
 		frame = new JFrame("CSE360 crossword Puzzle");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		crosswordGUI panel = new crosswordGUI();
+		CrosswordGUI panel = new CrosswordGUI();
 		frame.getContentPane().add(panel);
 		frame.setSize(750, 600);
 		frame.setResizable(false);
 		frame.setVisible(true);
-
 	}
-
-
-
 }
-

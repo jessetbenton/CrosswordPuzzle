@@ -606,8 +606,8 @@ public class CrosswordPanel extends JPanel {
     	game.setAcross(across);
     	game.setDown(down);
     	game.setScore(calculateScore());
-    	((crosswordGUI) this.getParent()).getDB().findTopPlayers();
-    	((crosswordGUI) this.getParent()).getDB().writeToFile();
+    	((CrosswordGUI) this.getParent()).getDB().findTopPlayers();
+    	((CrosswordGUI) this.getParent()).getDB().writeToFile();
     	
     	
     	
@@ -755,7 +755,7 @@ public class CrosswordPanel extends JPanel {
 		}
 	}
 	public void backToParent( CrosswordPanel pane) {
-		crosswordGUI parent = ((crosswordGUI) pane.getParent());
+		CrosswordGUI parent = ((CrosswordGUI) pane.getParent());
 		parent.hideGame();
 		parent.showPuzzleChooser();
 		

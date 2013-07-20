@@ -94,8 +94,7 @@ public class PuzzleIndividualPanel extends JPanel {
 			iconPath = ICON_DEFAULT;
 		}
 		
-		
-		icon.setIcon(new ImageIcon(iconPath));
+		icon.setIcon(new ImageIcon(getClass().getResource("resources/" + iconPath)));
 		icon.setVisible(true);
 		icon.setBounds(45, 30, 100, 100);
 		icon.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -119,5 +118,4 @@ public class PuzzleIndividualPanel extends JPanel {
 		out += puzzle.getSize() + "x" + puzzle.getSize();
 		return out;
 	}
-	
 }

@@ -134,8 +134,8 @@ public class CreateNewAccount extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			//firstScreen for back button
-			((crosswordGUI) pane.getParent()).hideCreateUserPanel();
-			((crosswordGUI) pane.getParent()).loginPanel.setVisible(true);
+			((CrosswordGUI) pane.getParent()).hideCreateUserPanel();
+			((CrosswordGUI) pane.getParent()).loginPanel.setVisible(true);
 		}
 		
 	}
@@ -170,7 +170,7 @@ public class CreateNewAccount extends JPanel{
 						invalidUsername.setVisible(false);
 						if( validCharacterCheck(cPassTF.getPassword()) ) {
 							invalidPassword.setVisible(false);
-							crosswordGUI parent = (crosswordGUI) currentPane.getParent();
+							CrosswordGUI parent = (CrosswordGUI) currentPane.getParent();
 							Player createdPlayer = new Player( username, pass);
 							parent.database.addUser(createdPlayer);
 							parent.hideCreateUserPanel();

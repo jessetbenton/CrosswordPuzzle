@@ -7,7 +7,7 @@ import javax.swing.*;
  * @author max Far
  */
 @SuppressWarnings("serial")
-public class crosswordGUI extends JPanel {
+public class CrosswordGUI extends JPanel {
 
 	public CrosswordPanel puzzle;
 	public WelcomePanel welcomePane;
@@ -21,7 +21,7 @@ public class crosswordGUI extends JPanel {
 	public Player player2;
 
 
-	public crosswordGUI() {
+	public CrosswordGUI() {
 		setLayout(null);
 		firstView();
 	}
